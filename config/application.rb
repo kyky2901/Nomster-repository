@@ -20,5 +20,6 @@ module Nomster
 
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )
+#    config.logger = Logger.new(STDOUT)
   end
 end
