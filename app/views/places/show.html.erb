@@ -6,15 +6,12 @@
 
 <% if @place.latitude.present? && @place.longitude.present? %>
   <script>
-
     function initMap() {
       var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
-
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: myLatLng
       });
-
       var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
@@ -41,6 +38,16 @@
 
   <% end %>
 </div>
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Modal -->
@@ -90,13 +97,6 @@
 <% end %>
 </div>
 
-
-
-
-
-
-<h1>Photos</h1>
-
 <% @place.photos.each do |photo| %>
 
   <div>
@@ -107,11 +107,15 @@
   </div>
 <% end %>
 
+
 <!-- Button trigger modal -->
+<div class="float-right">
+<div class="col-10 offset-1">
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myPhotoModal">
   Add a Photo
 </button>
-
+</div>
+</div>
 <!-- Modal -->
 <div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myPhotoModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -135,3 +139,11 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
