@@ -22,9 +22,10 @@ module Nomster
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )
 #    config.logger = Logger.new(STDOUT)
+    config.assets.initialize_on_precompile = false
   end
 
 
 end
 
-config.assets.initialize_on_precompile = false
+
