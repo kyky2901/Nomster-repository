@@ -1,5 +1,6 @@
 require_relative 'boot'
 
+
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -22,4 +23,8 @@ module Nomster
     config.assets.precompile += %w( .svg .eot .woff .ttf )
 #    config.logger = Logger.new(STDOUT)
   end
+
+
 end
+
+config.assets.initialize_on_precompile = false
